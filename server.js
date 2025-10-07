@@ -30,6 +30,13 @@ app.get('/', (req, res) => {
     environment: process.env.NODE_ENV || 'development'
   });
 });
+// Initialize database tables
+initializeDatabase();
+
+// Start server (your existing code)
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
 
 // Start server
 app.listen(PORT, '0.0.0.0', () => {

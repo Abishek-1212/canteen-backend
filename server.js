@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-
+const initializeDatabase = require('./init-db');
 const authRoutes = require('./routes/auth');
 const canteensRoutes = require('./routes/canteens');
 const menuRoutes = require('./routes/menu');
